@@ -7,6 +7,7 @@ import numpy as np
 import cv2
 
 image = cv2.imread("test9.jpg")
+image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 
 
 assert image.shape[2] == 3
