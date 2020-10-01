@@ -7,16 +7,15 @@ import numpy as np
 import cv2
 
 image = cv2.imread("test9.jpg")
-image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 
 
 assert image.shape[2] == 3
 
 # Split channels and converting source image for gray scale
 
-R = np.double(image[:,:,0])
+B = np.double(image[:,:,0])
 G = np.double(image[:,:,1])
-B = np.double(image[:,:,2])
+R = np.double(image[:,:,2])
 Gray = 0.299*R + 0.587*G + 0.114*B
 
 
