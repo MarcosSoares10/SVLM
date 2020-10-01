@@ -26,7 +26,7 @@ print(Gray.shape)
 
 # Applying a Gaussian  mask  to  extract  the  local  characteristic 
 # For 1/2, 1/4, 1/8 and After resizing images for original size
-sigmablur = 20.5
+sigmablur = 0.5
 sizegaussiankernel = 3
 L1 = cv2.GaussianBlur(Gray,(sizegaussiankernel,sizegaussiankernel),sigmablur)
 L2 = cv2.resize(cv2.GaussianBlur(cv2.resize(Gray,(int(height/2),int(width/2))),(sizegaussiankernel,sizegaussiankernel),sigmablur), (width,height),interpolation=cv2.INTER_CUBIC)
